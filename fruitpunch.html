@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Inter Tight' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta charset="utf-8"/>
+    <style type="text/css">
+        body {
+             font-family: 'Inter Tight', sans-serif;
+             background-color: #a6c9c2;
+        }
+         .fruit { 
+            background-color: #f2d0a9; 
+            color: white; 
+            padding: 11px; 
+            font-size: 15px; 
+            border: none; 
+         }
+        .title { 
+            color: white; 
+        }
+    </style>
+    <title> Fruit-Punch! </title>
+</head>
+<body>
+    <h1 class="title">Fruit-Punch! 🍉🥥🍒🥝 </h1>
+
+    <section id="select-fruit">
+        <h2>Elige tu fruta: </h2>
+        <input type="radio" name="fruta" id="sandia">
+        <label for="sandia"> Sandía </label><br>
+        <input type="radio" name="fruta" id="cereza">
+        <label for="cereza"> Cereza </label><br>
+        <input type="radio" name="fruta" id="avellana">
+        <label for="avellana"> Avellana </label><br>
+        <input type="radio" name="fruta" id="papaya">
+        <label for="papaya"> Papaya </label><br>
+
+        <!---- Sandía - Dulces, Cereza - Rojos, Avellana - Secos, Papaya - Tropical --->
+
+        <button class="fruit" id="btnfruit" onclick="btnfruitJugadorA()">Selecciona</button>
+    </section>
+
+    <section id="select-ataque">
+        <h3>Elige tu ataque:</h3>
+        <p>Tu fruta tiene <span id="vidas-jugador">3</span> vidas</p>
+        <p>La fruta del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>
+
+        <p>
+            <button class="fruit" id="btnrojos" onclick="ataque('Rojos')">Rojos</button>
+            <button class="fruit" id="btndulces" onclick="ataque('Dulces')">Dulces</button>
+            <button class="fruit" id="btnsecos" onclick="ataque('Secos')">Secos</button>
+            <button class="fruit" id="btntropical" onclick="ataque('Tropical')">Tropical</button>
+        </p>
+    </section>
+
+    <section id="mensajes">
+        <p id="mensaje"></p>
+    </section>
+
+    <section id="Refresca">
+        <button onclick="location.reload()" class="fruit" id="refrescar">Refrescar</button>
+    </section>
+
+    <script src="fruitpunch.js"></script>
+</body>
+</html>
